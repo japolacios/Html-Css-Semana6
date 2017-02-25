@@ -1,0 +1,159 @@
+body,
+html {
+    background: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    min-width: 320px;
+    transition: all 1s cubic-bezier(0.29, 0.25, 0.35, 0.97);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1 0 auto;
+}
+
+header img {
+    height: 5em;
+    width: auto;
+    margin: 1em 0 1em 1em;
+}
+
+header h1 {
+    flex: 1 0 auto;
+}
+
+.page-wrapper {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 320px;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex: 2 0 auto;
+}
+
+.menu {
+    flex: 1 0 100px;
+}
+
+.content {
+    flex: 5 1 auto;
+}
+
+.article {
+    border: solid 1px #000;
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 10;
+}
+
+.text-content p {
+    flex-grow: 5;
+    padding: 0 1em;
+}
+
+.article-image img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a,a:link,a:visited{
+	color:black;
+	text-decoration: none;
+	transition: all .4s cubic-bezier(0.29, 0.25, 0.35, 0.97);
+}
+
+a:hover{
+	color:white;
+	transition: all .4s cubic-bezier(0.29, 0.25, 0.35, 0.97);
+}
+
+li:hover{
+	background: darkgray;
+}
+
+/* para 980px o menos */
+
+@media screen and (max-width:980px) {
+    header {
+        border: dotted 2px green;
+    }
+    body{
+    	background: #fffcfc;
+    	transition: all 1s cubic-bezier(0.29, 0.25, 0.35, 0.97);
+    }
+}
+
+
+/* para 700px o menos */
+
+@media screen and (max-width:700px) {
+    header {
+        border: solid 2px black;
+    }
+    .content-wrapper {
+        flex-direction: column;
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    .menu {
+        flex: 1 0 auto;
+    }
+    .page-wrapper {
+        width: 90%;
+    }
+        body{
+    	background: #fcfffc;
+    	transition: all 1s cubic-bezier(0.29, 0.25, 0.35, 0.97);
+    }
+}
+
+
+/* para 480px o menos */
+
+@media screen and (max-width:480px) {
+    body,
+    html {
+        font-size: 95%;
+        background: #fcfcff;
+    	transition: all 1s cubic-bezier(0.29, 0.25, 0.35, 0.97);
+    }
+    .page-wrapper {
+        width: 100%;
+    }
+    header {
+        border: solid 2px orange;
+    }
+    .article {
+        flex-direction: column;
+    }
+}
